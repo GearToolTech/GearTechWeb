@@ -1,0 +1,173 @@
+:root {
+  --blue: #3b5999;
+  --blue-Light: #46c1f6;
+  --violet: #660066;
+  --pink: #e1306c;
+  --red: #f21b3f;
+  --orange: #ff8c00;
+  --green: #38b000;
+  --yellow: #fca311;
+}
+:root /*Colors originais*/ {
+  --vermelho: #ff0000;
+  --verde: #00ff00;
+  --azul: #0000ff;
+  --amarelo: #ffff00;
+  --magenta: #ff00ff;
+  --ciano: #00ffff;
+  --cinza: #808080;
+  --marrom: #800000;
+  --verde-escuro: #008000;
+  --azul-escuro: #000080;
+  --roxo: #800080;
+  --azul-esverdeado: #008080;
+  --prata: #c0c0c0;
+  --oliva: #808000;
+  --laranja: #ff6600;
+}
+
+:root /*Verde*/ {
+  --verde-puro: #00ff00;
+  --verde-claro1: #33ff33;
+  --verde-claro2: #66ff66;
+  --verde-claro3: #99ff99;
+  --verde-muito-claro: #ccffcc;
+  --verde-escuro1: #009900;
+  --verde-escuro2: #00cc00;
+  --verde-muito-escuro: #006600;
+}
+:root /*Verde Escuro */ {
+  --verde-escuro1: #004d00;
+  --verde-escuro2: #006600;
+  --verde-escuro3: #007300;
+  --verde-escuro4: #008000;
+  --verde-escuro5: #008c00;
+  --verde-escuro6: #009900;
+  --verde-escuro7: #00a600;
+}
+:root /*Azul Esverdeado*/ {
+  --azul-esverdeado1: #004040;
+  --azul-esverdeado2: #005959;
+  --azul-esverdeado3: #007373;
+  --azul-esverdeado4: #008080;
+  --azul-esverdeado5: #009999;
+  --azul-esverdeado6: #00abab;
+  --azul-esverdeado7: #00cccc;
+}
+:root /* Ciano */ {
+  --ciano-puro: #00ffff;
+  --ciano-claro1: #33ffff;
+  --ciano-claro2: #66ffff;
+  --ciano-claro3: #99ffff;
+  --ciano-muito-claro: #ccffff;
+  --ciano-escuro1: #009999;
+  --ciano-escuro2: #00cccc;
+  --ciano-muito-escuro: #006666;
+}
+:root /*Azul*/ {
+  --azul-puro: #0000ff;
+  --azul-claro1: #3333ff;
+  --azul-claro2: #6666ff;
+  --azul-claro3: #9999ff;
+  --azul-muito-claro: #ccccff;
+  --azul-escuro1: #000099;
+  --azul-escuro2: #0000cc;
+  --azul-muito-escuro: #000066;
+}
+:root /*Azul Escuro*/ {
+  --azul-escuro1: #000033;
+  --azul-escuro2: #00004d;
+  --azul-escuro3: #000066;
+  --azul-escuro4: #000080;
+  --azul-escuro5: #000099;
+  --azul-escuro6: #0000b3;
+  --azul-escuro7: #0000cc;
+}
+:root /*Roxo */ {
+  --roxo1: #400040;
+  --roxo2: #4d004d;
+  --roxo3: #590059;
+  --roxo4: #660066;
+  --roxo5: #730073;
+  --roxo6: #800080;
+  --roxo7: #8c008c;
+}
+:root /*Magenta*/ {
+  --magenta-puro: #ff00ff;
+  --magenta-claro1: #ff33ff;
+  --magenta-claro2: #ff66ff;
+  --magenta-claro3: #ff99ff;
+  --magenta-muito-claro: #ffccff;
+  --magenta-escuro1: #990099;
+  --magenta-escuro2: #cc00cc;
+  --magenta-muito-escuro: #660066;
+}
+:root /*Vermelhos*/ {
+  --vermelho-puro: #ff0000;
+  --vermelho-claro1: #ff3333;
+  --vermelho-claro2: #ff6666;
+  --vermelho-claro3: #ff9999;
+  --vermelho-muito-claro: #ffcccc;
+  --vermelho-escuro1: #990000;
+  --vermelho-escuro2: #cc0000;
+  --vermelho-muito-escuro: #660000;
+}
+:root /*Laranja */ {
+  --laranja1: #ff8000;
+  --laranja2: #ff8c00;
+  --laranja3: #ff9900;
+  --laranja4: #ffa600;
+  --laranja5: #ffb300;
+  --laranja6: #ffbf00;
+  --laranja7: #ffcc00;
+}
+:root /*Amarelo*/ {
+  --amarelo-puro: #ffff00;
+  --amarelo-claro1: #ffff33;
+  --amarelo-claro2: #ffff66;
+  --amarelo-claro3: #ffff99;
+  --amarelo-muito-claro: #ffffcc;
+  --amarelo-escuro1: #999900;
+  --amarelo-escuro2: #cccc00;
+  --amarelo-muito-escuro: #666600;
+}
+:root /*Oliva*/ {
+  --oliva1: #666600;
+  --oliva2: #737300;
+  --oliva3: #808000;
+  --oliva4: #8c8c00;
+  --oliva5: #999900;
+  --oliva6: #a6a600;
+  --oliva7: #b3b300;
+}
+:root  /* Marrom */ {
+  --marrom-puro: #800000;
+  --marrom-claro1: #993333;
+  --marrom-claro2: #b36666;
+  --marrom-claro3: #cc9999;
+  --marrom-muito-claro: #e6cccc;
+  --marrom-escuro1: #660000;
+  --marrom-escuro2: #4d0000;
+  --marrom-muito-escuro: #330000;
+}
+
+:root /* Cinza */ {
+  --cinza-puro: #808080;
+  --cinza-claro1: #999999;
+  --cinza-claro2: #b3b3b3;
+  --cinza-claro3: #cccccc;
+  --cinza-muito-claro: #e6e6e6;
+  --cinza-escuro1: #666666;
+  --cinza-escuro2: #4d4d4d;
+  --cinza-muito-escuro: #333333;
+}
+
+:root /*Prata*/ {
+  --prata1: #a6a6a6;
+  --prata2: #b3b3b3;
+  --prata3: #bfbfbf;
+  --prata4: #cccccc;
+  --prata5: #d9d9d9;
+  --prata6: #e6e6e6;
+  --prata7: #f2f2f2;
+}

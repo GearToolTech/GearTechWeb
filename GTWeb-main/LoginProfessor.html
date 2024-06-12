@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="img/logoNavigation.ico"
+      type="image/x-icon"
+    />
+    <title>GearTech - Login Professor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/LoginProfessor.css" rel="stylesheet" />
+    <script src="js/LoginProfessor.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="menuLateral/menuLateral.css" />
+    <script src="menuLateral/menuLateral.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="home">
+      <div class="barraTopo" onclick="window.location.href=''">
+        <img id="iconSite" src="img/iconSite.svg" />
+        <h1 class="Titulo">GearTech</h1>
+      </div>
+      <div class="itensTopo">
+        <button
+          onclick="window.location.href='WelcomeToGearTech.html'"
+          class="sairTelaWelcome"
+        >
+          <div class="textSairTelaWelcome">
+            <i class="bx bx-log-out"></i>
+            <p>Voltar</p>
+          </div>
+        </button>
+      </div>
+      <div id="titlePage" style="width: 100%">
+        <h1 style="text-align: center; font-size: 30px" class="text">
+          Login Professor
+        </h1>
+      </div>
+    </header>
+    <nav>
+      <img
+        class="imgFundoGear"
+        id="imgFundo"
+        src="img/imgFundoGearLaranja02.png"
+        alt=""
+      />
+      <div class="borderAnimate"></div>
+      <div class="divContentLogin">
+        <div class="divBoxLogin">
+          <div class="divLoginUser">
+            <i
+              style="color: var(--text-color)"
+              class="fa-solid fa-chalkboard-user icon fa-2x"
+            ></i>
+            <h1 class="text">Login</h1>
+          </div>
+          <div class="boxLogin">
+            <h3 class="text">NIF</h3>
+            <div class="inputNIFText">
+              <input
+                type="number"
+                id="inputNIFText"
+                class="text"
+                placeholder="exemplo: 13524685"
+                required
+              /><i class="bx bx-user-circle icon"></i>
+            </div>
+            <span id="errorNIF"></span>
+            <h3 class="text">Senha</h3>
+            <div class="inputSenha">
+              <input
+                class="password-input"
+                type="password"
+                id="inputSenhaText"
+                class="text"
+                placeholder="********"
+                required
+              />
+              <ion-icon
+                name="eye-outline"
+                id="showPasswordIcon"
+                class="show-password-icon"
+                onclick="togglePasswordVisibility()"
+              ></ion-icon>
+            </div>
+            <span id="errorSenha"></span>
+          </div>
+          <div class="boxButton">
+            <button class="buttonEntrar" onclick="ValidarEntrada()">
+              <p class="textEntrar">Entrar</p>
+            </button>
+            <button
+              type="button"
+              class="buttonCadastar"
+              onclick="window.location.href='CadastroProfessor.html'"
+            >
+              Cadastrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

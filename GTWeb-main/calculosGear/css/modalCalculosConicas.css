@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    /*  */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --corDestaque: #0096c7;
+    --selectBar-color: #dddce9;
+    --toggle-color: #333;
+    --text-color: #000;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    --tran-06: all 0.6s ease;
+    --tran-07: all 0.7s ease;
+    --tran-08: all 0.8s ease;
+    --tran-09: all 0.9s ease;
+}
+
+aside .modal-containerConicas {
+    width: 150%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    backdrop-filter: blur(3px);
+    background: #00000015;
+    z-index: 9;
+    justify-content: center;
+}
+
+aside .modal-containerConicas hr {
+    border: 0px;
+    border-top: 1px solid var(--text-color);
+}
+
+aside .modal-containerConicas .boxNameCalc {
+    justify-content: space-between;
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+aside .modal-containerConicas .boxNameCalc h2 {
+    color: var(--text-color);
+}
+
+aside .modal-containerConicas .boxNameCalc .iconInfo {
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+aside .modal-containerConicas .modalConicas {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--sidebar-color);
+    border-radius: 30px;
+    width: 50%;
+}
+
+aside .activeConicas {
+    display: flex;
+}
+
+aside .activeConicas .modalConicas {
+    animation: modalConicas .4s;
+}
+
+@keyframes modalConicas {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+aside .modal-containerConicas .modalConicas .contentCalculo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+aside .modal-containerConicas .modalConicas .boxInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: auto;
+    width: 100%;
+}
+
+aside .modal-containerConicas .modalConicas .btnsfunction {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 100px;
+}
+
+aside .modal-containerConicas .modalConicas .boxInputs input {
+    height: 37px;
+    width: 40%;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding-left: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1.8px solid var(--text-color);
+    background: var(--selectBar-color);
+    color: var(--text-color);
+    transition: var(--tran-05);
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs button {
+    font-size: medium;
+    width: 17.5%;
+    height: 37px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs .btnCalcular {
+    background: rgb(28, 225, 28);
+    color: white;
+    transition: var(--tran-03);
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs .btnCalcular:hover {
+    background: #0cc10c;
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs .btnLinpar {
+    background: rgb(0, 102, 255);
+    color: white;
+    transition: var(--tran-03);
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs .btnLinpar:hover {
+    background: rgb(0, 21, 255);
+}
+
+aside .modal-containerConicas .modalConicas .boxInfoInputs P {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+aside .modal-containerConicas .modalConicas .boxResult2 {
+    background: var(--selectBar-color);
+    margin: 25px;
+    height: 90%;
+    width: 45%;
+}
+
+aside .modal-containerConicas .modalConicas .boxResult2 p {
+    padding: 15px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+aside .modal-containerConicas .modalConicas .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+aside .modal-containerConicas .modalConicas .btns button {
+    font-size: medium;
+    width: 10%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 800px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+aside .modal-containerConicas .modalConicas #button2 {
+    background: var(--text-color);
+    color: var(--sidebar-color);
+    border: 2px solid var(--text-color);
+    transition: var(--tran-04);
+}
+
+aside .modal-containerConicas .modalConicas #button2:hover {
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+aside .modal-containerConicas .modalConicas #generate-pdf2{
+    background: #f21b3f;
+    color: white;
+    transition: var(--tran-04);
+}
+aside .modal-containerConicas .modalConicas #generate-pdf2:hover{
+    background: #cf0022;
+    border: 2px solid var(--text-color);
+}
+
+@media (max-width: 500px) {
+    aside .modal-containerConicas .modalConicas {
+        padding: 10px;
+        width: 80%;
+    }
+
+    aside .modal-containerConicas .modalConicas span,
+    .btns button {
+        font-size: smaller;
+    }
+}

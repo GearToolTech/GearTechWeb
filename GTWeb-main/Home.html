@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- instalacao e configuracao mini impresora termica bl -->
+  <head>
+    <link
+      rel="shortcut icon"
+      href="img/logoNavigation.ico"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="calculosGear/js/modalCalculosDentesRetos.js"></script>
+    <script src="calculosGear/js/modalCalculosConicas.js"></script>
+    <script src="calculosGear/js/modalCalculosHelicoidal.js"></script>
+    <script src="calculosGear/js/modalCalculosTransmissao.js"></script>
+    <script src="js/config.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="menuLateral/menuLateral.css" />
+    <link
+      rel="stylesheet"
+      href="calculosGear/css/modalCalculosDentesRetos.css"
+    />
+    <link rel="stylesheet" href="calculosGear/css/modalCalculosConicas.css" />
+    <link
+      rel="stylesheet"
+      href="calculosGear/css/modalCalculosHelicoidal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="calculosGear/css/modalCalculosTransmissao.css"
+    />
+    <link rel="stylesheet" href="css/Home.css" />
+    <script></script>
+
+    <title>GearTech</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="BarraLateral close">
+      <div class="box-menu">
+        <i class="bx bx-menu toggle"></i>
+      </div>
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search-alt icon"></i>
+            <input type="text" placeholder="pesquise..." />
+          </li>
+          <ul class="menu_links">
+            <li class="nav-link">
+              <a href="">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Inicio</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li style="cursor: pointer">
+            <a onclick="sair()">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Sair</span>
+            </a>
+          </li>
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Modo Escuro</span>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <header class="home">
+      <div class="barraTopo" onclick="window.location.href=''">
+        <img id="iconSite" src="img/iconSite.svg" />
+        <h1 class="Titulo">GearTech</h1>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <input type="radio" name="slide" id="c1" checked />
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="icon"><i class="bx bxs-cog bx-sm"></i></div>
+              <div class="description">
+                <h4>Engrenagens Dentes Retos</h4>
+                <p>
+                  Transmissão entre eixos ortogonais ou concorrentes com
+                  diferentes ângulos entre eles.
+                </p>
+              </div>
+              <div class="boxButton">
+                <button class="btnOpenModal" onclick="openModalDentesRetos()">
+                  Calcular
+                </button>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c2" />
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="icon"><i class="bx bxs-cog bx-sm"></i></div>
+              <div class="description">
+                <h4>Engrenagens cônicas</h4>
+                <p>
+                  Elas são usadas para mudar a direção da transmissão de força
+                  sem mudar a sua velocidade
+                </p>
+              </div>
+              <div class="boxButton">
+                <button class="btnOpenModal" onclick="openModalConicas()">
+                  Calcular
+                </button>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c3" />
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="icon"><i class="bx bxs-cog bx-sm"></i></div>
+              <div class="description">
+                <h4>engrenagem helicoidal</h4>
+                <p>
+                  Com a presença de dentes transversais que atuam em conjunto
+                  para a transmissão do torque
+                </p>
+              </div>
+              <div class="boxButton">
+                <button class="btnOpenModal" onclick="openModalHelicoidal()">
+                  Calcular
+                </button>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c4" />
+          <label for="c4" class="card">
+            <div class="row">
+              <div class="icon"><i class="bx bxs-cog bx-sm"></i></div>
+              <div class="description">
+                <h4>Engrenagem de transmissão</h4>
+                <p>
+                  permitem o adição e diminuição de velocidade com mínimas
+                  perdas de energia, são responsáveis em transmitir o atividade
+                  entre dois eixos.
+                </p>
+              </div>
+              <div class="boxButton">
+                <button class="btnOpenModal" onclick="openModalTransmissao()">
+                  Calcular
+                </button>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="modal-containerDentesRetos">
+        <div class="modalDentesRetos">
+          <div class="BoxNameCalc">
+            <h2>Calcular Engrenagem de Dentes Retos</h2>
+            <i class="bx bx-help-circle bx-sm iconInfo"></i>
+          </div>
+          <hr />
+          <div class="contentCalculo">
+            <div class="boxInfoInputs">
+              <div class="boxInputs">
+                <input id="modulo1Input" type="number" placeholder="modulo 1" />
+                <input id="modulo2Input" type="number" placeholder="modulo 2" />
+                <input
+                  id="numeroDentes1Input"
+                  type="number"
+                  placeholder="número dentes 1"
+                />
+                <input
+                  id="numeroDentes2Input"
+                  type="number"
+                  placeholder="número dentes 2"
+                />
+              </div>
+              <div class="btnsfunction">
+                <button class="btnLinpar" onclick="limparInputs1()">
+                  Limpar
+                </button>
+                <button class="btnCalcular" onclick="calcularDentesRetos()">
+                  Calcular
+                </button>
+              </div>
+              <p>
+                Engrenagem de dentes retos é usada para transmitir um movimento
+                circular contínuo, entre eixos paralelos simples. São muito
+                utilizadas em equipamentos como máquina de lavar roupa e relógio
+                de corda, porém este tipo de engrenagem é utilizada em carros na
+                marcha ré, por isto que possuem um ruído maior quando neste
+                movimento. Elas não são indicadas na caixa de marchas para
+                frente devido ao nível de ruído. Para minimizar este barulho e a
+                tensão entre as engrenagens, costuma-se usar a Engrenagem
+                helicoidal.
+              </p>
+            </div>
+            <div class="boxResult">
+              <!-- O resultado será exibido aqui -->
+              <p id="resultadoDentesRetos"></p>
+            </div>
+          </div>
+          <hr />
+          <div class="btns">
+            <button
+              id="button1"
+              class="btnClose"
+              onclick="closeModalDentesRetos()"
+            >
+              Fechar
+            </button>
+            <button id="generate-pdf">Gerar PDF</button>
+          </div>
+        </div>
+        <script>
+          const btnGenerate = document.querySelector("#generate-pdf");
+
+          btnGenerate.addEventListener("click", () => {
+            const contentClone = document
+              .querySelector(".boxResult")
+              .cloneNode(true);
+
+            // Criando um elemento temporário fora do corpo da página
+            const tempDiv = document.createElement("div");
+            tempDiv.appendChild(contentClone);
+
+            // Configuração do arquivo final de PDF
+            const options = {
+              margin: [10, 10, 10, 10],
+              filename: "arquivo.pdf",
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+            };
+
+            // Gerar e baixar o PDF
+            html2pdf().set(options).from(tempDiv).save();
+          });
+        </script>
+      </div>
+      <div class="modal-containerConicas">
+        <div class="modalConicas">
+          <div class="boxNameCalc">
+            <h2>Calcular Engrenagem Conica</h2>
+            <i class="bx bx-help-circle bx-sm iconInfo"></i>
+          </div>
+          <hr />
+          <div class="contentCalculo">
+            <div class="boxInfoInputs">
+              <div class="boxInputs">
+                <input id="modulo3Input" type="number" placeholder="modulo 1" />
+                <input id="modulo4Input" type="number" placeholder="modulo 2" />
+                <input
+                  id="numeroDentes3Input"
+                  type="number"
+                  placeholder="número dentes 1"
+                />
+                <input
+                  id="numeroDentes4Input"
+                  type="number"
+                  placeholder="número dentes 2"
+                />
+                <input
+                  id="numeroAngulo1Input"
+                  type="number"
+                  placeholder="AnguloPrimitivoCones 1"
+                />
+                <input
+                  id="numeroAngulo2Input"
+                  type="number"
+                  placeholder="AnguloPrimitivoCones 2"
+                />
+              </div>
+              <div class="btnsfunction">
+                <button class="btnLinpar" onclick="limparInputs2()">
+                  Limpar
+                </button>
+                <button class="btnCalcular" onclick="calcularConicas()">
+                  Calcular
+                </button>
+              </div>
+              <p>
+                engrenagens cónicas são utilizadas nas situações em que os eixos
+                das rodas motora e movida são concorrentes. As engrenagens
+                cónicas podem ter dentes retos, inclinados e espirais ou curvos,
+                podendo ainda apresentar eixos descentrados (hipoides).
+              </p>
+            </div>
+            <div class="boxResult2">
+              <p id="resultadoConicas"></p>
+            </div>
+          </div>
+          <hr />
+          <div class="btns">
+            <button id="button2" class="btnClose" onclick="closeModalConicas()">
+              Fechar
+            </button>
+            <button id="generate-pdf2">Gerar PDF</button>
+          </div>
+        </div>
+        <script>
+          const btnGenerate2 = document.querySelector("#generate-pdf2");
+          btnGenerate2.addEventListener("click", () => {
+            const contentClone = document
+              .querySelector(".boxResult2")
+              .cloneNode(true);
+            const tempDiv = document.createElement("div");
+            tempDiv.appendChild(contentClone);
+            const options = {
+              margin: [10, 10, 10, 10],
+              filename: "arquivo.pdf",
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+            };
+            html2pdf().set(options).from(tempDiv).save();
+          });
+        </script>
+      </div>
+      <div class="modal-containerHelicoidal">
+        <div class="modalHelicoidal">
+          <div class="boxNameCalc">
+            <h2>Calcular Engrenagem Helicoidal</h2>
+            <i class="bx bx-help-circle bx-sm iconInfo"></i>
+          </div>
+          <hr />
+          <div class="contentCalculo">
+            <div class="boxInfoInputs">
+              <div class="boxInputs">
+                <input id="modulo5Input" type="number" placeholder="modulo 1" />
+                <input id="modulo6Input" type="number" placeholder="modulo 2" />
+                <input
+                  id="numeroDentes5Input"
+                  type="number"
+                  placeholder="número dentes 1"
+                />
+                <input
+                  id="numeroDentes6Input"
+                  type="number"
+                  placeholder="número dentes 2"
+                />
+                <input
+                  id="AnguloInclinacaoInput"
+                  type="number"
+                  placeholder="Angulo inclinacao"
+                />
+              </div>
+              <div class="btnsfunction">
+                <button class="btnLinpar" onclick="limparInputs3()">
+                  Limpar
+                </button>
+                <button class="btnCalcular" onclick="calcularHelicoidal()">
+                  Calcular
+                </button>
+              </div>
+              <p>
+                engrenagem helicoidal tem esse nome devido ao seu formato de
+                hélice, com a presença de dentes transversais que atuam em
+                conjunto para a transmissão do torque. Além disso, a peça
+                trabalha em pares, por meio do encaixe dos dentes do pinhão com
+                a engrenagem durante a operação.
+              </p>
+            </div>
+            <div class="boxResult3">
+              <!-- O resultado será exibido aqui -->
+              <p id="resultadoHelicoidal"></p>
+            </div>
+          </div>
+          <hr />
+          <div class="btns">
+            <button
+              id="button3"
+              class="btnClose"
+              onclick="closeModalHelicoidal()"
+            >
+              Fechar
+            </button>
+            <button id="generate-pdf3">Gerar PDF</button>
+          </div>
+        </div>
+        <script>
+          const btnGenerate3 = document.querySelector("#generate-pdf3");
+
+          btnGenerate3.addEventListener("click", () => {
+            const contentClone = document
+              .querySelector(".boxResult3")
+              .cloneNode(true);
+
+            // Criando um elemento temporário fora do corpo da página
+            const tempDiv = document.createElement("div");
+            tempDiv.appendChild(contentClone);
+
+            const options = {
+              margin: [10, 10, 10, 10],
+              filename: "arquivo.pdf",
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+            };
+
+            html2pdf().set(options).from(tempDiv).save();
+          });
+        </script>
+      </div>
+
+      <div class="modal-containerTransmissao">
+        <div class="modalTransmissao">
+          <div class="boxNameCalc">
+            <h2>Calcular Engrenagem Transmissão</h2>
+            <i class="bx bx-help-circle bx-sm iconInfo"></i>
+          </div>
+          <hr />
+          <div class="contentCalculo">
+            <div class="boxInfoInputs">
+              <div class="boxInputs">
+                <div id="inputs-container"></div>
+                <script>
+                  function limparInputs4() {
+                    const inputs = document.querySelectorAll(
+                      "input[type='number']"
+                    );
+                    inputs.forEach((input) => {
+                      input.value = "";
+                    });
+                  }
+                </script>
+              </div>
+              <div class="btnsfunction">
+                <button class="btnLinpar" onclick="limparInputs4()">
+                  Limpar</button
+                ><button
+                  style="
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    background: black;
+                    color: white;
+                    font-size: 20px;
+                  "
+                  id="add-input-btn"
+                >
+                  +
+                </button>
+                <button
+                  style="
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    background: black;
+                    color: white;
+                    font-size: 20px;
+                  "
+                  id="remove-input-btn"
+                >
+                  -
+                </button>
+                <button class="btnCalcular" onclick="calcularTransmissao()">
+                  Calcular
+                </button>
+              </div>
+              <p>
+                A engrenagem de transmissão, permitem o adição e diminuição de
+                velocidade com mínimas perdas de energia, são responsáveis em
+                transmitir o atividade entre dois eixos, utilizada em diferentes
+                equipamentos industriais.
+              </p>
+            </div>
+            <div class="boxResult4">
+              <!-- O resultado será exibido aqui -->
+              <p id="resultadoTransmissao"></p>
+            </div>
+          </div>
+          <hr />
+          <div class="btns">
+            <button
+              id="button4"
+              class="btnClose"
+              onclick="closeModalTransmissao()"
+            >
+              Fechar
+            </button>
+            <button id="generate-pdf4">Gerar PDF</button>
+          </div>
+        </div>
+        <script>
+          const btnGenerate4 = document.querySelector("#generate-pdf4");
+
+          btnGenerate4.addEventListener("click", () => {
+            const contentClone = document
+              .querySelector(".boxResult4")
+              .cloneNode(true);
+
+            // Criando um elemento temporário fora do corpo da página
+            const tempDiv = document.createElement("div");
+            tempDiv.appendChild(contentClone);
+
+            // Configuração do arquivo final de PDF
+            const options = {
+              margin: [10, 10, 10, 10],
+              filename: "arquivo.pdf",
+              html2canvas: { scale: 2 },
+              jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+            };
+
+            // Gerar e baixar o PDF
+            html2pdf().set(options).from(tempDiv).save();
+          });
+        </script>
+      </div>
+    </aside>
+    <script src="js/Home.js"></script>
+
+    <script src="menuLateral/menuLateral.js"></script>
+  </body>
+</html>

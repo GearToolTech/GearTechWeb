@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="img/logoNavigation.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="menuLateral/menuLateral.css" />
+    <link rel="stylesheet" href="css/CadastroProfessor.css" />
+    <script src="js/CadastroProfessor.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>GearTech - Cadastro Professor</title>
+  </head>
+
+  <body>
+    <header class="home">
+      <div class="barraTopo" onclick="window.location.href=''">
+        <img id="iconSite" src="img/iconSite.svg" />
+        <h1 class="Titulo">GearTech</h1>
+      </div>
+
+      <div class="itensTopo">
+        <button
+          onclick="window.location.href='LoginProfessor.html'"
+          class="sairTelaWelcome"
+        >
+          <div class="textSairTelaWelcome">
+            <i class="bx bx-log-out"></i>
+            <p>Voltar</p>
+          </div>
+        </button>
+      </div>
+      <div id="titlePage" style="width: 100%">
+        <h1 style="text-align: center; font-size: 30px" class="text">
+          Cadastro Professor
+        </h1>
+      </div>
+    </header>
+    <nav>
+      <img
+        class="imgFundoGear"
+        id="imgFundo"
+        src="img/imgFundoGearLaranjaDuo.png"
+        alt=""
+      />
+      <div class="borderAnimate"></div>
+      <div class="divContentCadastro">
+        <div class="divBoxCadastro">
+          <div class="LE">
+            <h3 class="text">Nome do Professor</h3>
+            <span class="error" id="errorNome"></span>
+          </div>
+          <div class="inputNome">
+            <input
+              type="text"
+              id="inputNomeText"
+              class="text"
+              placeholder="nome"
+            /><i class="bx bxs-pencil icon"></i>
+          </div>
+          <div class="LE">
+            <h3 class="text">E-mail</h3>
+            <span class="error" id="errorEmailProfessor"></span>
+          </div>
+          <div class="inputEmailProfessor">
+            <input
+              type="text"
+              id="inputEmailProfessor"
+              class="text"
+              placeholder="E-mail:  ...@"
+            /><i class="bx bxs-envelope icon"></i>
+          </div>
+          <div class="LE">
+            <h3 class="text">NIF</h3>
+            <span class="error" id="errorNIF"></span>
+          </div>
+          <div class="inputNIFText">
+            <input
+              type="number"
+              id="inputNIFText"
+              class="text"
+              placeholder="exemplo: 13524685"
+            /><i class="bx bxs-receipt icon"></i>
+          </div>
+          <div class="LE">
+            <h3 class="text">Senha</h3>
+            <span class="error" id="errorSenha"></span>
+          </div>
+          <div class="inputSenha">
+            <input
+              class="password-input"
+              type="password"
+              id="inputSenhaText"
+              class="text"
+              placeholder="********"
+            />
+            <ion-icon
+              name="eye-outline"
+              id="showPasswordIconSenha"
+              class="show-password-iconSenha"
+              onclick="togglePasswordVisibilitySenha()"
+            ></ion-icon>
+          </div>
+          <div class="LE">
+            <h3 class="text">Confirme a senha</h3>
+            <span class="error" id="errorConfirmeSenha"></span>
+          </div>
+          <div class="inputSenhaConfirme">
+            <input
+              class="password-inputComfirme"
+              type="password"
+              id="inputSenhaConfirmeText"
+              class="text"
+              placeholder="********"
+            />
+            <ion-icon
+              name="eye-outline"
+              id="showPasswordIconConfiSenha"
+              class="show-password-iconConfiSenha"
+              onclick="togglePasswordVisibilityConfiSenha()"
+            ></ion-icon>
+          </div>
+
+          <div class="boxButton">
+            <button
+              id="buttonCadastar"
+              type="button"
+              onclick="ValidarCadastro()"
+            >
+              Cadastrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

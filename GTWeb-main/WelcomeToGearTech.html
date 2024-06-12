@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>GearTech</title>
+    <link
+      rel="shortcut icon"
+      href="img/logoNavigation.ico"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/WelcomeToGearTech.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="js/WelcomeToGearTech.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="home">
+      <div class="barraTopo" onclick="window.location.href=''">
+        <img id="iconSite" src="img/iconSite.svg" />
+        <h1 class="Titulo">GearTech</h1>
+      </div>
+    </header>
+    <nav>
+      <div class="contentInicio">
+        <div class="borderAnimation"></div>
+        <div class="boxInicio">
+          <div class="boxTextInicio">
+            <h1 class="text">
+              Transforme a complexidade <br />
+              em simplicidade.
+            </h1>
+            <h3 class="text">
+              Não perca mais tempo com cálculos demorados e propensos a erros
+              Descubra como é fácil otimizar suas atividades diárias.
+            </h3>
+            <button
+              class="buttonUtilizar"
+              type="button"
+              onclick="scrollToSection()"
+            >
+              Utilize o GearTch
+            </button>
+          </div>
+        </div>
+        <div class="boxImgInicio">
+          <img src="img/imgFundoGearLaranja.png" alt="" />
+        </div>
+      </div>
+    </nav>
+    <aside class="section" id="secaoDestino">
+      <div id="asideLogin">
+        <div class="contentUserAluno">
+          <div class="boxUserAluno">
+            <i class="fa-solid fa-user-graduate icon fa-4x"></i>
+            <div>
+              <h2>Entrar como Aluno</h2>
+
+              <button
+                class="buttonEntrar"
+                onclick="window.location.href='LoginAluno.html'"
+              >
+                Entrar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="contentUserProfessor">
+          <div class="boxUserProfessor">
+            <i class="fa-solid fa-chalkboard-user icon fa-4x"></i>
+            <div>
+              <h2>Entrar como Professor</h2>
+              <button
+                class="buttonEntrar"
+                onclick="window.location.href='LoginProfessor.html'"
+              >
+                Entrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>
